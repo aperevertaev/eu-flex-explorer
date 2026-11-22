@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+web/dist/
+
+# EU-Flex runs (large)
+runs/
+*.nc
+
+# Env
+.env
+.DS_Store
