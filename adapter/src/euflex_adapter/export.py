@@ -14,7 +14,7 @@ import argparse
 import fnmatch
 import json
 from dataclasses import asdict, dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import xarray as xr
@@ -79,7 +79,7 @@ def export_datatree(
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest = Manifest(
         run_id=run_id,
-        exported_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        exported_at=datetime.now(UTC).isoformat(timespec="seconds"),
         exporter_version=__version__,
         **provenance,
     )
